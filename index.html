@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10091c">
+  <title>Aniworld — Anime olami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #10091c;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 22px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px;
+      background: #ffffff12;
+      border: 1px solid #ffffff20;
+      border-radius: 18px;
+      backdrop-filter: blur(20px);
+    }
+    .logo { color: #bd82ff; font-size: 26px; font-weight: bold; }
+    .hero {
+      margin-top: 30px;
+      padding: 45px 25px;
+      border-radius: 25px;
+      background: linear-gradient(135deg,#48206f,#17102c,#090812);
+      border: 1px solid #a76aff55;
+    }
+    h1 { font-size: 38px; margin-bottom: 15px; }
+    p { color: #c7bad8; line-height: 1.6; }
+    input {
+      margin-top: 20px;
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #a76aff66;
+      background: #ffffff12;
+      color: white;
+      font-size: 16px;
+    }
+    h2 { margin: 30px 0 18px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 15px;
+    }
+    .card {
+      padding: 25px 12px;
+      border-radius: 16px;
+      background: #ffffff10;
+      border: 1px solid #ffffff20;
+      text-align: center;
+      color: #d6b7ff;
+    }
+    footer { margin-top: 40px; text-align: center; color: #9c8baa; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👑 ANIWORLD</div>
+    <div>☰</div>
+  </header>
+
+  <section class="hero">
+    <h1>Anime olamiga xush kelibsiz!</h1>
+    <p>Sevimli animelaringizni kashf eting. Eng yaxshi anime olami bir joyda!</p>
+    <input type="search" placeholder="🔍 Anime qidirish...">
+  </section>
+
+  <h2>🏆 Anime bo‘limlari</h2>
+  <section class="cards">
+    <div class="card">🏆 Top animelar</div>
+    <div class="card">🔥 Yangi mavsum</div>
+    <div class="card">⏳ Kutilayotgan</div>
+    <div class="card">❤️ Sevimlilar</div>
+  </section>
+
+  <h2>🎭 Janrlar</h2>
+  <section class="cards">
+    <div class="card">⚔️ Action</div>
+    <div class="card">😂 Comedy</div>
+    <div class="card">❤️ Romance</div>
+    <div class="card">✨ Fantasy</div>
+  </section>
+
+  <footer>© 2026 Aniworld · Anime olami 💜</footer>
+</body>
+</html>
