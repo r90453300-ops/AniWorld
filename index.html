@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -6,14 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#10091c">
   <title>Aniworld — Anime olami</title>
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: #10091c;
       color: white;
       font-family: Arial, sans-serif;
-      padding: 22px;
+      padding: 18px;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -24,17 +32,32 @@
       border-radius: 18px;
       backdrop-filter: blur(20px);
     }
-    .logo { color: #bd82ff; font-size: 26px; font-weight: bold; }
+
+    .logo {
+      color: #bd82ff;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
     .hero {
-      margin-top: 30px;
-      padding: 45px 25px;
-      border-radius: 25px;
+      margin-top: 25px;
+      padding: 35px 20px;
+      border-radius: 24px;
       background: linear-gradient(135deg,#48206f,#17102c,#090812);
       border: 1px solid #a76aff55;
     }
-    h1 { font-size: 38px; margin-bottom: 15px; }
-    p { color: #c7bad8; line-height: 1.6; }
-    input {
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #c7bad8;
+      line-height: 1.6;
+    }
+
+    #search {
       margin-top: 20px;
       width: 100%;
       padding: 16px;
@@ -43,25 +66,89 @@
       background: #ffffff12;
       color: white;
       font-size: 16px;
+      outline: none;
     }
-    h2 { margin: 30px 0 18px; }
+
+    h2 {
+      margin: 30px 0 18px;
+      font-size: 22px;
+    }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-      gap: 15px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
     }
+
     .card {
-      padding: 25px 12px;
+      padding: 20px 10px;
       border-radius: 16px;
       background: #ffffff10;
       border: 1px solid #ffffff20;
       text-align: center;
       color: #d6b7ff;
     }
-    footer { margin-top: 40px; text-align: center; color: #9c8baa; }
+
+    #anime-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .anime-card {
+      overflow: hidden;
+      border-radius: 15px;
+      background: #ffffff10;
+      border: 1px solid #ffffff20;
+    }
+
+    .anime-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .anime-info {
+      padding: 12px;
+    }
+
+    .anime-card h3 {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 7px;
+    }
+
+    .anime-card p {
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      color: #9c8baa;
+    }
+
+    @media (min-width: 700px) {
+      body {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      #anime-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .anime-card img {
+        height: 280px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="logo">👑 ANIWORLD</div>
     <div>☰</div>
@@ -69,11 +156,20 @@
 
   <section class="hero">
     <h1>Anime olamiga xush kelibsiz!</h1>
-    <p>Sevimli animelaringizni kashf eting. Eng yaxshi anime olami bir joyda!</p>
-    <input type="search" placeholder="🔍 Anime qidirish...">
+    <p>
+      Sevimli animelaringizni kashf eting.
+      Eng yaxshi anime olami bir joyda!
+    </p>
+
+    <input
+      id="search"
+      type="search"
+      placeholder="🔍 Anime qidirish..."
+    >
   </section>
 
   <h2>🏆 Anime bo‘limlari</h2>
+
   <section class="cards">
     <div class="card">🏆 Top animelar</div>
     <div class="card">🔥 Yangi mavsum</div>
@@ -82,6 +178,7 @@
   </section>
 
   <h2>🎭 Janrlar</h2>
+
   <section class="cards">
     <div class="card">⚔️ Action</div>
     <div class="card">😂 Comedy</div>
@@ -89,9 +186,17 @@
     <div class="card">✨ Fantasy</div>
   </section>
 
-  <footer>© 2026 Aniworld · Anime olami 💜</footer>
-<input id="search" type="text" placeholder="Anime qidirish...">
-<div id="anime-list"></div>
+  <h2>🔥 Mashhur animelar</h2>
+
+  <div id="anime-list" aria-live="polite">
+    <p>Animelar yuklanmoqda...</p>
+  </div>
+
+  <footer>
+    © 2026 Aniworld · Anime olami 💜
+  </footer>
+
   <script src="app.js"></script>
+
 </body>
 </html>
